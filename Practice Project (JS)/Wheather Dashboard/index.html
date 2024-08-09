@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .weather-container { max-width: 600px; margin: 0 auto; }
+        .weather-item { display: flex; justify-content: space-between; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Weather Dashboard</h1>
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <button id="fetch-btn">Fetch Weather</button>
+        <div id="weather-info"></div>
+    </div>
+
+    <script>
+        // Function Declarations
+        function fetchWeatherData(city) {
+            const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
+            const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => displayWeatherData(data))
+                .catch(error => console.error('Error fetching weather data:', error));
+        }
+
+        function displayWeatherData(data) {
+            const weatherInfo = document.getElementById('weather-info');
+            weatherInfo.innerHTML = '';
+
+            const filteredData = data.list.filter(item => item.dt_txt.includes('12:00:00'));
+            const averageTemp = filteredData.reduce((acc, item) => acc + item.main.temp, 0) / filteredData.length;
+
+            filteredData.map(item => {
+                const div = document.createElement('div');
+                div.className = 'weather-item';
+                div.innerHTML = `
+                    <span>${item.dt_txt.split(' ')[0]}</span>
+                    <span>${item.weather[0].description}</span>
+                    <span>${item.main.temp}°C</span>
+                `;
+                weatherInfo.appendChild(div);
+            });
+
+            const avgTempDiv = document.createElement('div');
+            avgTempDiv.className = 'weather-item';
+            avgTempDiv.innerHTML = `<strong>Average Temperature: ${averageTemp.toFixed(2)}°C</strong>`;
+            weatherInfo.appendChild(avgTempDiv);
+        }
+
+        // Function Expressions
+        const handleFetchWeather = function() {
+            const cityInput = document.getElementById('city-input');
+            const city = cityInput.value.trim();
+            if (city) {
+                fetchWeatherData(city);
+                cityInput.value = '';
+            }
+        };
+
+        // Arrow Functions
+        document.getElementById('fetch-btn').addEventListener('click', () => handleFetchWeather());
+        document.getElementById('city-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleFetchWeather();
+        });
+    </script>
+</body>
+</html>

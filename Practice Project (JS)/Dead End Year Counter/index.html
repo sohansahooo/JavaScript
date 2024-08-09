@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days Left in Year Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            color: #5a5a5a;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        input[type="date"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+            width: 20%;
+            margin-top: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Days Left in Year Calculator</h1>
+    <label for="inputDate">Choose Date:</label>
+    <input type="date" id="inputDate" min="" max="">
+    <button onclick="calculateDaysLeft()">Calculate</button>
+
+    <p id="output"></p>
+    <br>
+    <p id="extra-put"></p>
+
+    <script>
+        // Set the min and max attributes for the date input
+        window.onload = function() {
+    const currentYear = new Date().getFullYear();
+    const minDate = `${currentYear}-01-01`; // Corrected template literals
+    const maxDate = `${currentYear}-12-31`; // Corrected template literals
+    document.getElementById('inputDate').setAttribute('min', minDate);
+    document.getElementById('inputDate').setAttribute('max', maxDate);
+};
+
+function calculateDaysLeft() {
+    // Get the user input date
+    const inputDate = new Date(document.getElementById('inputDate').value);
+    const year = inputDate.getFullYear();
+    
+    // Calculate the total number of days in the year
+    const endOfYear = new Date(year, 11, 31); // December 31 of the input year
+    const startOfYear = new Date(year, 0, 1); // January 1 of the input year
+    const totalDaysInYear = (endOfYear - startOfYear) / (1000 * 60 * 60 * 24) + 1;
+    
+    // Calculate the number of days left until the end of the year
+    const currentDate = new Date(inputDate);
+    const daysLeft = (endOfYear - currentDate) / (1000 * 60 * 60 * 24);
+
+    // Calculate the percentage of the year left
+    const percentageLeft = (daysLeft / totalDaysInYear) * 100;
+
+    // Determine the correct singular or plural form for "day"
+    const dayText = daysLeft <= 1 ? "Day left" : "Days left";
+
+    // Display the result
+    document.getElementById('output').innerText = `${dayText}: ${Math.ceil(daysLeft)} (${percentageLeft.toFixed(2)}%)`;
+    document.getElementById('extra-put').innerText = "Make it before it's too late 💝";
+}
+
+    </script>
+</body>
+</html>

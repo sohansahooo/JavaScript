@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Down</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div id="user-input">
+        <input type="datetime-local" name="Input Date" id="date-input" />
+        <button onclick="myButton()">Start Countdown</button>
+      </div>
+      <div class="timer">
+        <div>
+          <input type="text" readonly value="00" />
+          <label for="">Days</label>
+        </div>
+        <div>
+          <input type="text" readonly value="00" />
+          <label for="">Hour</label>
+        </div>
+        <div>
+          <input type="text" readonly value="00" />
+          <label for="">Minutes</label>
+        </div>
+        <div>
+          <input type="text" readonly value="00" />
+          <label for="">Seconds</label>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
