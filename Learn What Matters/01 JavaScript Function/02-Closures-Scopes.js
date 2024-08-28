@@ -46,4 +46,53 @@ function init() {
   }
 
 init();
-  
+
+
+
+/* Bind, Call, Apply */
+
+// Bind
+function add(x, y) {
+    console.log(this); // window object
+    return x + y;
+}
+
+let addTwo = add.bind({ foo: 'bar' }, 2); // bind the function to an object and set the first argument
+console.log(addTwo(3)); // outputs 5
+
+// Call
+function multiply(x, y) {
+    console.log(this); // window object
+    return x * y;
+}
+
+console.log(multiply.call({ foo: 'bar' }, 2, 3)); // outputs 6
+
+// Apply
+function sum(x, y) {
+    console.log(this); // window object
+    return x + y;
+}
+
+console.log(sum.apply({ foo: 'bar' }, [2, 3])); // outputs 5
+
+// Example of using bind, call, and apply with an object
+let person = {
+    name: 'John',
+    sayHello: function() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
+
+let anotherPerson = {
+    name: 'Jane'
+};
+
+person.sayHello(); // outputs "Hello, my name is John"
+
+let boundSayHello = person.sayHello.bind(anotherPerson);
+boundSayHello(); // outputs "Hello, my name is Jane"
+
+person.sayHello.call(anotherPerson); // outputs "Hello, my name is Jane"
+
+person.sayHello.apply(anotherPerson); // outputs "Hello, my name is Jane"
