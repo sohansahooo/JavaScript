@@ -1,4 +1,4 @@
-/* Numbers Math */
+/* Numbers & Math */
 
 // +++++++++++++++++++++++++++++++++++++++++ Numbers & Math +++++++++++++++++++++++++++++++++++++++++
 
@@ -20,7 +20,7 @@ console.log(typeof(validFloatScore), validFloatScore);     // Output: number 600
 
 /* Methods (includes dot) */
 console.log(score.toString().length);       // Output: 3
-console.log(score.toFixed(2));              // Output: 600.00
+console.log(validFloatScore.toFixed(2));              // Output: 600.00
 
 const preNumber = 26.869
 console.log(preNumber.toPrecision(3));      // Output: 26.9
@@ -48,7 +48,7 @@ console.log(Math.floor(Math.random()*10) + 1);      // value 1 to 9
 
 const min = 10
 const max = 20
-console.log(Math.floor(Math.random() * (max - min + 1)) + 10);      // value range 10 to 20
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);      // value range 10 to 20
 
 
 
