@@ -13,8 +13,8 @@
 
 ### 3. Functions
 - Function Declaration and Expression
-- Arrow Functions
-- Higher-Order Functions (Callbacks, Array Methods like map, filter, reduce)
+- Arrow Function
+- Higher-Order Function
 
 ### 4. Async Nature
 - Callbacks
@@ -35,4 +35,4 @@
 - Try/Catch
 - Throwing Errors
 
-#### *These topics will give you a solid foundation in JavaScript and prepare you well for learning React.js and backend development.*
+#### *These topics will give a solid foundation in JavaScript and prepare you well for learning React.js and backend development.*
