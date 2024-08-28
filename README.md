@@ -7,28 +7,31 @@
 - Conditional Statements (if, else, switch)
 - Loops (for, while, do-while)
 
-### 2. Functions
+### 2. Objects and Arrays
+- Object Properties and Methods
+- Array Manipulation (Adding/Removing Elements, Iterating Arrays)
+
+### 3. Functions
 - Function Declaration and Expression
 - Arrow Functions
 - Higher-Order Functions (Callbacks, Array Methods like map, filter, reduce)
 
-### 3. Objects and Arrays
-- Object Properties and Methods
-- Array Manipulation (Adding/Removing Elements, Iterating Arrays)
+### 4. Async Nature
+- Callbacks
+- Promises
+- Async/Await
 
-### 4. DOM Manipulation
+### 5. DOM Manipulation
 - Selecting Elements
 - Event Handling
 - Modifying Elements
 
-### 5. ES6+ Features
+### 6. ES6+ Features
 - Template Literals
 - Destructuring
 - Spread and Rest Operators
-- Modules (import/export)
-- Promises and Async/Await
 
-### 6. Error Handling
+### 7. Error Handling
 - Try/Catch
 - Throwing Errors
 
