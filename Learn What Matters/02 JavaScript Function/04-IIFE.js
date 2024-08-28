@@ -5,9 +5,11 @@
 */
 
 (function one() {
+    // Named IIFE
     console.log("DB Connected");
 })();
 
 ((name) => {
+    // Anonymous IIFE
     console.log(`DB Connect Two ${name}`);
 })("Sohan")
