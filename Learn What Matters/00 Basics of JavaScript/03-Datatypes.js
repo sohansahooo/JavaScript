@@ -1,6 +1,8 @@
 /* Datatypes in javascript 
 1. Premitive (Number, String, Boolean, Null, Undefined, Symbol, BigInt)
 2. Non-Premitive (These're reference data type (), {}, [], ... etc.)
+
+>>> In JavaScript, primitive values are stored on the stack, whereas reference values (objects) are stored on the heap.
 */
 
 
