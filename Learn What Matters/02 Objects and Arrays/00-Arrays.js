@@ -34,11 +34,28 @@ myArray.slice(2, 5)      // Slice method returns a new array from the specified 
 console.log(myArray);
 
 // Concat():
+console.log("Concat Method:");
+
 const myArray1 = [1, 2, 3, 4, 5]
 const myArray2 = [6, 7, 8, 9, 10]
 
 const myArray3 = myArray1.concat(myArray2)
 console.log(myArray3);
+
+// const spread_arrays = [...myArray1, ...myArray2]     // An another way to print discussed below
+// console.log(spread_arrays);
+
+// const another_array = myArray3.flat(Infinity)        // One another way
+// console.log(" Using flat method: ", another_array);
+
+// console.log("Using from method: ", Array.from("GHOST"));    // Convert to array
+// console.log("Using from method: ", Array.from({name: "GHOST"}));    // Interesting Case
+
+// let score1 = 200
+// let score2 = 400
+// let score3 = 600
+// console.log("of method: ",Array.of(score1, score2, score3));
+
 
 // indexOf():
 console.log(myArray3.indexOf(10));      // index number of 10 is 9
@@ -70,6 +87,7 @@ console.log(d[0][2]);   // to choose a specific index
 
 
 // +++++++++++++++++++++++++++++++++++++++++ Array Destructuring +++++++++++++++++++++++++++++++++++++++++
+console.log("ARRAY DESTRUCTURING");
 
 /* It allows to extract values from an array and assign them to variables in a concise and expressive way. */
 
@@ -93,6 +111,7 @@ console.log(objC); // 3
 
 
 // +++++++++++++++++++++++++++++++++++++++++ Spread Operator +++++++++++++++++++++++++++++++++++++++++
+console.log("SPREAD OPERATOR");
 
 /* Denotes (...) and Used to expand an array or an object into individual elements. */
 
