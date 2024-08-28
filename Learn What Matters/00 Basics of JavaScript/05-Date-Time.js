@@ -2,7 +2,7 @@
 
 // Date:
 const now = new Date()
-console.log(now);           // Not Readable
+console.log(now);
 
 const myDate = new Date()
 console.log(myDate.toString());         // Full Format
@@ -20,3 +20,21 @@ console.log(myCreatedDate.toLocaleString());
 const myTimeStamp = new Date()
 console.log(myTimeStamp.getTime());
 console.log(myTimeStamp.getMilliseconds());
+
+
+let newDate = new Date()
+console.log(newDate.getMonth() + 1);
+
+console.log(`Day: ${newDate.toLocaleDateString()} and Time: ${newDate.toLocaleTimeString()}`)
+
+// More Readable Way
+newDate = newDate.toLocaleString('default', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+})
+
+console.log(newDate);
