@@ -36,3 +36,9 @@
 - Throwing Errors
 
 #### *These topics will give a solid foundation in JavaScript and prepare you well for learning React.js and backend development.*
+
+----
+
+
+### Reference:
+#### Guru: *Hitesh Choudhary*
