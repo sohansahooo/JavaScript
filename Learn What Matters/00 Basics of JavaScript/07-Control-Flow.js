@@ -30,12 +30,21 @@ for (let i = 1; i <= 10; i++) {
 // while
 
 let i = 21; // initialization
-
 while (i <= 36) {
   // condition
   console.log(`Hello ${i}`);
   i++; // iteration
 }
+
+let countdown = []
+let c = 5
+while (c > 0) {
+  countdown.push(c)
+  c--
+}
+
+console.log(countdown);
+
 
 // do...while
 
