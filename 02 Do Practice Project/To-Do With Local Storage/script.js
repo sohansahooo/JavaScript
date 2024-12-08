@@ -14,6 +14,7 @@ function addTask() {
     }
 }
 
+
 function deleteTask(button) {
     const taskItem = button.parentElement;
     taskItem.remove();
