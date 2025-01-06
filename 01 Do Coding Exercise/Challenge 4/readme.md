@@ -1,56 +1,67 @@
-# Assignments
-Test your skills with these array comparison challenges:
+# Parent Identification Challenge
 
-### Find Common Names
+## Challenge
+Can you find the person who is a parent (i.e., has the `isPapa` property set to true) from an array of objects? This challenge will help you practice using loops and conditionals.
 
-**Task:** Write a program to find common names between two lists of names.
-
-**Input:** 
-- `list1` (an array of strings)
-- `list2` (an array of strings)
-
-**Output:** An array of common names.
-
-**Example:**
-
-- Input: `list1 = ["Alice", "Bob", "Charlie"]`, `list2 = ["Bob", "David", "Alice"]`
-- Output: `["Alice", "Bob"]`
-
-- Input: `list1 = ["Alice", "Bob"]`, `list2 = ["Charlie", "David"]`
-- Output: `[]`
-
-### Find Common Courses
-
-**Task:** Write a program to find common courses between two students' course lists.
+## Explanation
+In this challenge, you'll use a loop to iterate through an array of objects and check if the `isPapa` property of any object is true. Your task is to identify the object where `isPapa` is true.
 
 **Input:** 
-- `courses_student1` (an array of course names)
-- `courses_student2` (an array of course names)
+- `people` (an array of objects where each object has two properties: `name` (a string) and `isPapa` (a boolean))
 
-**Output:** An array of common course names.
-
-**Example:**
-
-- Input: `courses_student1 = ["Math", "Science", "History"]`, `courses_student2 = ["Science", "Art", "History"]`
-- Output: `["Science", "History"]`
-
-- Input: `courses_student1 = ["Math", "Biology"]`, `courses_student2 = ["Chemistry", "Physics"]`
-- Output: `[]`
-
-### Find Common Ingredients
-
-**Task:** Write a program to find common ingredients between two recipes.
-
-**Input:** 
-- `recipe1` (an array of ingredient names)
-- `recipe2` (an array of ingredient names)
-
-**Output:** An array of common ingredient names.
+**Output:** The name of the person who is a parent, or "Not found" if no such person exists.
 
 **Example:**
+- **Input:** `people = [{name: "John", isPapa: false}, {name: "Alex", isPapa: true}, {name: "Emma", isPapa: false}]`
+- **Output:** "Alex"
 
-- Input: `recipe1 = ["Flour", "Sugar", "Eggs"]`, `recipe2 = ["Sugar", "Butter", "Eggs"]`
-- Output: `["Sugar", "Eggs"]`
+- **Input:** `people = [{name: "John", isPapa: false}, {name: "Emma", isPapa: false}]`
+- **Output:** "Not found"
 
-- Input: `recipe1 = ["Flour", "Sugar"]`, `recipe2 = ["Butter", "Milk"]`
-- Output: `[]`
+## Assignments
+Test your skills with these loop and conditional challenges:
+
+### 1. Find the Leader
+
+**Task:** Write a program to find the team leader from an array of team members. The leader is identified by having the `isLeader` property set to true.
+
+**Input:** `team` (an array of objects where each object has `name` (a string) and `isLeader` (a boolean))
+
+**Output:** The name of the team leader, or "Leader not found" if no leader exists.
+
+**Example:**
+- **Input:** `team = [{name: "Alice", isLeader: false}, {name: "Bob", isLeader: true}, {name: "Charlie", isLeader: false}]`
+- **Output:** "Bob"
+
+- **Input:** `team = [{name: "Alice", isLeader: false}, {name: "Charlie", isLeader: false}]`
+- **Output:** "Leader not found"
+
+### 2. Find the Oldest
+
+**Task:** Write a program to find the oldest person from an array of people. The oldest person is identified by having the highest `age` property.
+
+**Input:** `people` (an array of objects where each object has `name` (a string) and `age` (an integer))
+
+**Output:** The name of the oldest person.
+
+**Example:**
+- **Input:** `people = [{name: "Alice", age: 30}, {name: "Bob", age: 40}, {name: "Charlie", age: 35}]`
+- **Output:** "Bob"
+
+- **Input:** `people = [{name: "Alice", age: 30}, {name: "Charlie", age: 28}]`
+- **Output:** "Alice"
+
+### 3. Find the Most Expensive Item
+
+**Task:** Write a program to find the most expensive item from an array of items. The most expensive item is identified by having the highest `price` property.
+
+**Input:** `items` (an array of objects where each object has an `item` (a string) and `price` (a decimal number))
+
+**Output:** The name of the most expensive item.
+
+**Example:**
+- **Input:** `items = [{item: "Laptop", price: 999.99}, {item: "Phone", price: 699.99}, {item: "Tablet", price: 399.99}]`
+- **Output:** "Laptop"
+
+- **Input:** `items = [{item: "Phone", price: 699.99}, {item: "Tablet", price: 399.99}]`
+- **Output:** "Phone"

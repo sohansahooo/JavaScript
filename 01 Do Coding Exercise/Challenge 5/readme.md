@@ -1,56 +1,52 @@
-Assignments
-Test your skills with these summation challenges:
+# Common Numbers Challenge
 
-Total Savings:
+## Challenge
+Can you find the common numbers between two arrays? This challenge will help you practice using loops and conditionals to compare elements from multiple arrays.
 
-Task: Write a program to calculate the total savings if you save a fixed amount every day for N days. Assume you save a certain amount each day and calculate the total savings over N days.
+## Explanation
+In this challenge, you'll use loops to check which numbers appear in both of the given arrays. Your task is to identify these common numbers.
 
-Input: N (an integer representing the number of days) and daily_savings (a decimal number representing the amount saved each day)
+**Input:** 
+- `array1` (an array of integers)
+- `array2` (an array of integers)
 
-Output: The total amount saved over N days.
+**Output:** An array of common numbers between the two arrays, or an empty array if there are no common numbers.
 
-Example:
+**Example:**
+- **Input:** `array1 = [1, 2, 3, 4, 5]`, `array2 = [4, 5, 6, 7, 8]`
+- **Output:** `[4, 5]`
 
-Input: N = 7, daily_savings = 10
+- **Input:** `array1 = [1, 2, 3]`, `array2 = [4, 5, 6]`
+- **Output:** `[]`
 
-Output: 70 (because 10 * 7 = 70)
+## Assignments
+Test your skills with these array comparison challenges:
 
-Input: N = 5, daily_savings = 20
+### 1. Find Common Names
 
-Output: 100 (because 20 * 5 = 100)
+**Task:** Write a program to find common names between two lists of names.
 
-Birthday Candles:
+**Input:** `list1` (an array of strings) and `list2` (an array of strings)
 
-Task: Write a program to calculate the total number of birthday candles needed if each year you add one candle for each additional year. Calculate the total number of candles needed from age 1 to age N.
+**Output:** An array of common names.
 
-Input: N (an integer representing the age)
+**Example:**
+- **Input:** `list1 = ["Alice", "Bob", "Charlie"]`, `list2 = ["Bob", "David", "Alice"]`
+- **Output:** `["Alice", "Bob"]`
 
-Output: The total number of candles needed.
+- **Input:** `list1 = ["Alice", "Bob"]`, `list2 = ["Charlie", "David"]`
+- **Output:** `[]`
 
-Example:
+### 2. Find Common Courses
 
-Input: N = 4
+**Task:** Write a program to find common courses between two students' course lists.
 
-Output: 10 (because 1 + 2 + 3 + 4 = 10)
+**Input:** `courses_student1` (an array of course names) and `courses_student2` (an array of course names)
 
-Input: N = 6
+**Output:** An array of common course names.
 
-Output: 21 (because 1 + 2 + 3 + 4 + 5 + 6 = 21)
+**Example:**
+- **Input:** `courses_student1 = ["Math", "Science", "History"]`, `courses_student2 = ["Science", "Art", "History"]`
+- **Output:** `["Science", "History"]`
 
-Weekly Sales:
-
-Task: Write a program to calculate the total sales amount for a week if you have different sales each day. Sum the sales from each day to get the total weekly sales.
-
-Input: sales (an array of decimal numbers representing daily sales for the week)
-
-Output: The total weekly sales amount.
-
-Example:
-
-Input: sales = [50.5, 60.0, 45.75, 70.25, 55.0, 80.0, 65.5]
-
-Output: 427.0 (because 50.5 + 60.0 + 45.75 + 70.25 + 55.0 + 80.0 + 65.5 = 427.0)
-
-Input: sales = [20.0, 30.0, 25.0, 40.0]
-
-Output: 115.0 (because 20.0 + 30.0 + 25.0 + 40.0 = 115.0)
+- **Input:** `courses_student1 = ["Math", "Biology"]`, `courses_student2 = ["Chemistry", "Physics"]`
