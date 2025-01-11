@@ -15,7 +15,7 @@ function fetchData(url) {
         console.log(data);
       })
       .catch(error => {
-        // Handle any errors that occur during the fetch
+        // Handle any error that occur during the fetch
         console.error('Error fetching data:', error);
       });
   }
