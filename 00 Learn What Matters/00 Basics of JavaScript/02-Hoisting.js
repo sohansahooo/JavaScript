@@ -2,7 +2,7 @@
 
 var a;
 console.log(a); // undefined
-a = 10;         // now defined
+a = 10; // now defined
 console.log(a); // 10
 
 /* like this function declaration can be hoisted
@@ -22,4 +22,3 @@ console.log(a); // 10
             console.log('Hello, Hi, Bye');
         }
 */
-        
