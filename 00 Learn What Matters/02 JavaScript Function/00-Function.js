@@ -23,54 +23,65 @@
 
 // Example 1:
 function myFunction() {
-    console.log("This's my name: Sohan");
-    console.log("This's my age: 21");
+  console.log("This's my name: Sohan");
+  console.log("This's my age: 21");
 }
 
-myFunction();   // Function Call or Function Invoke
-
+myFunction(); // Function Call or Function Invoke
 
 // Example 2:
 function yourFunction(msg) {
-    console.log(msg);
+  console.log(msg);
 }
 
 yourFunction("I Love 3000");
 
-
 // Example 3:
 function calc(x, y, z) {
-    return (`Numbers are: ${x + y + z}`);
+  return `Numbers are: ${x + y + z}`;
 }
 
 calc(3, 6, 12);
 
-
 // Example 4:
 function greet(message = "Hello") {
-    for (let i = 1; i <= 5; i++) {
-        console.log(`message ${i}`);
-    }
+  for (let i = 1; i <= 5; i++) {
+    console.log(`message ${i}`);
+  }
 }
 greet("Hi");
-    
-
 
 // Applied Example:
 function myMarks(Math, Eng, Science, Comp, Phy, Chem) {
-    const totalMarks = Math + Eng + Science + Comp + Phy + Chem;
-    const average = totalMarks / 6;
+  const totalMarks = Math + Eng + Science + Comp + Phy + Chem;
+  const average = totalMarks / 6;
 
-    const percentage = (totalMarks / 600) * 100;
+  const percentage = (totalMarks / 600) * 100;
 
-    return percentage;
+  return percentage;
 }
 
 const myPercentage = myMarks(75, 80, 85, 90, 95, 100);
 console.log(`Percentage: ${myPercentage}`);
 
+/* Types of Functions: */
 
+// 1. Named Function (Function Declaration)
+function greet() {
+  return "Hello";
+}
 
+// 2. Anonymous Function (Function Expression)
+const greet = function () {
+  return "Hello";
+};
 
+// 3. Arrow Function
+const greet = () => {
+  return "Hello";
+};
 
-
+// 4. IIFE
+(function greet() {
+  return "Hello";
+})();
