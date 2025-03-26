@@ -19,4 +19,3 @@ buttonsArray.forEach(btn => {
         }
     });
 });
-
